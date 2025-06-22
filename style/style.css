@@ -6,7 +6,7 @@
     "wdth" 100;
 }
 .btn{
-    background-color: #fd6e0a;
+    background-color: #0c7110;
     font-weight: bold;
     color: white;
     padding: 8px 25px;
@@ -36,8 +36,11 @@ nav li a{
     text-decoration: none;
     font-size: 20px;
 }
+.dark-1{
+    color: green;
+}
 .dark-2{
-    color: #474747;
+    color: #e5ebe5;
 }
 nav ul{
     display: flex;
@@ -64,9 +67,9 @@ nav ul{
 }
 
 .header{
-    background-image: url('../images/header_bg.png');
+    /* background-image: url('../images/la.jpg'); */
     background-repeat: no-repeat;
-    background-position: bottom right;
+    background-position: 100%;
     /* background-position-y:center; */
 }
 .section-title{
@@ -76,10 +79,10 @@ nav ul{
 }
 .section-desc{
     font-size: 18px;
-    color: #757575;
+    color: #1b0b0b;
 }
 .secondary-bg{
-    background-color: #fff8f3;
+    background-color: #baa494;
 }
 .about{
     border-radius: 10px;
