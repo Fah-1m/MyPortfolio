@@ -1,11 +1,13 @@
+/* General Font */
 .open-sans-normal {
-  font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
 }
-.btn{
+
+/* Button */
+.btn {
     background-color: #0c7110;
     font-weight: bold;
     color: white;
@@ -13,168 +15,377 @@
     border-radius: 5px;
     font-size: 15px;
     border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.btn:hover {
+    background-color: #075d0c;
 }
 
-nav{
+/* Fixed Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%; /* adjust space from edges */
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 0; /* remove margin to stop pushing */
+    box-sizing: border-box; /* ensures padding doesn't push outside screen */
+}
+
+
+/* Push content down */
+body {
+    margin: 20px;
+    padding-top: 90px; /* keeps content below navbar */
+}
+
+/* Header Background Image */
+.header {
+    background-image: url('../images/header_bg.png'); /* Your header image path */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; /* Make it fill */
+    min-height: 500px; /* Ensure enough height */
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin: 0px 100px;
 }
-.nav-title{
+
+/* Logo */
+.nav-title {
     font-weight: 800;
     font-size: 45px;
-}
-.text{
-    color: rgb(12, 89, 5);
-}
-nav ul li{
-    list-style: none;
-    margin-right: 51px;
-}
-nav li a{
-    text-decoration: none;
-    font-size: 20px;
-}
-.dark-1{
-    color: green;
-}
-.dark-2{
-    color: #e5ebe5;
-}
-nav ul{
-    display: flex;
-    align-items: center;
-}
-.banner-greetings{
-    font-size: 45px;
-    font-weight: 600;
-}
-.banner-title{
-    font-weight: bold;
-    font-size: 85px;
-}
-.bannerPP{
-    width: 500px;
-}
-.banner{
-    display: flex;
-    justify-content: space-between;
-    margin: 0 35px 0 230px;
-}
-.banner-content{
-    max-width: 640px;
+    color: black;
 }
 
-.header{
-    /* background-image: url('../images/la.jpg'); */
-    background-repeat: no-repeat;
-    background-position: 100%;
-    /* background-position-y:center; */
+/* Nav Links */
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
-.section-title{
-    font-size: 35px;
-    font-weight: bold;
-    color: #181818;
+
+nav a.nav-link {
+    text-decoration: none;
+    font-weight: 600;
+    color: #333;
+    position: relative;
+    transition: color 0.3s;
 }
-.section-desc{
-    font-size: 18px;
-    color: #1b0b0b;
+
+/* Hover effect */
+nav a.nav-link:hover {
+    color: #0c7110;
 }
-.secondary-bg{
-    background-color: #baa494;
+
+/* Underline animation */
+nav a.nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #0c7110;
+    left: 0;
+    bottom: -4px;
+    transition: width 0.3s ease;
 }
-.about{
+nav a.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Active link */
+nav a.active {
+    color: #0c7110;
+}
+nav a.active::after {
+    width: 100%;
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 70px;
+        right: 10%;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    nav ul.show {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Banner Container */
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 200px; /* space between image and text */
+    padding: 0 50px;
+}
+
+/* Banner Image */
+.bannerPP {
+    width: 550px; /* smaller for balance */
     border-radius: 10px;
-    padding:50px 50px;
+    object-fit: cover;
+}
+
+/* Banner Text */
+.banner-content {
+    max-width: 600px;
+}
+.banner-desc {
+    font-size: 30px;
+}
+
+.about {
+    border-radius: 10px;
+    padding: 50px;
     text-align: center;
     margin: 100px 0;
-
-}
-main section{
-    margin-top: 130px;
-}
-main{
-    max-width: 870px;
-    margin: 0 auto;
+    background-color: #baa494; /* keep secondary background */
 }
 
-.about-items{
+.about-items {
     display: flex;
     justify-content: space-around;
+    gap: 30px;
+    margin-top: 40px;
 }
-.item-desc{
+
+.about-item {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 180px;
+}
+
+.item-title {
+    font-weight: bold;
+    color: #555;
+}
+
+.item-desc {
     font-weight: 600;
+    font-size: 16px;
+    color: #222;
 }
-
-.text{
-    text-align: center;
-}
-.skill-container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-}
-.skill-desc{
-    padding: 30px;
-}
-.skill-title{
-    font-size: 50px;
-}
-.skills h1{
-    margin-left: 500px;
-    font-size: 40px;
-}
-
-.skill{
+.skills {
     
-    border: 2px;
-    border-color: solid rgb(101, 170, 32);
-    padding: 10px;
-    box-shadow: 0px 6px 50px 0px rgba(0, 0, 0, 0.06);
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.skills h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.skills h2 {
+    font-size: 28px;
+    margin: 40px 0 20px;
+    color: #0c7110;
+}
+
+/* Skills Grid Layout */
+.skill-container {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Individual Skill Card */
+.skill {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Skill Icon */
+.skill img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+/* Skill Title */
+.skill-title {
+    font-size: 20px;
+    font-weight: bold;
     margin-bottom: 10px;
 }
-.resume-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-    gap: 30px;
-    
-}
-.resume-container hr{
-    margin: 10px;
-}
-.resume>h3{
-    margin-left: 230px;
-}
-.experience-subtitle{
-    color: #757575;
-    font-size: 20px;
-    font-weight: 600;
-    margin: 20px;
-}
-.download{
-    margin-top: 50px;
-}
-footer{
-    padding: 130px 230px;
-    display: flex;
-    gap: 100px;
 
+/* Skill Description */
+.skill-desc {
+    font-size: 14px;
+    color: #555;
 }
-.footer-column{
-    width: 50%;
+.resume {
+    margin-top: 100px;
+    text-align: center;
 }
-footer input[type="text"], textarea{
-    height: 64px;
-    border-radius: 5px;
-    background-color: white;
-    display: block;
+
+.resume-table {
     width: 100%;
-    padding: 10px 20px;
-    margin-bottom: 24px;
-    border: none;
+    border-collapse: collapse;
+    margin-top: 30px;
+    background: white;
+    box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+}
 
+.resume-table th, .resume-table td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.resume-table th {
+    
+    color: rgb(14, 14, 14);
+    font-size: 18px;
+}
+
+.resume-table tr:hover {
+    background-color: #f2f2f2;
+}
+
+.resume-table td {
+    font-size: 16px;
+    color: #333;
+}
+.footer-with-bg {
+    position: relative;
+    background-image: url('../images/footer_bg.png'); /* Replace with your actual footer background image path */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 60px 8%;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    box-sizing: border-box;
+}
+
+/* Overlay for better contrast */
+.footer-with-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(138, 65, 65, 0.5); /* dark overlay */
+    z-index: 0;
+}
+
+.footer-with-bg > .footer-column {
+    position: relative;
+    z-index: 1;
+    flex: 1 1 320px;
+}
+
+/* Social icons style */
+.social-icons a img {
+    width: 32px;
+    margin-right: 15px;
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s ease;
+}
+
+.social-icons a:hover img {
+    filter: brightness(0.7) invert(0.6);
+}
+
+/* Contact form styles */
+.contact-me p {
+    margin-bottom: 25px;
+    font-size: 16px;
+    color: #ddd;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px 15px;
+    border-radius: 6px;
+    border: none;
+    font-size: 15px;
+    resize: vertical;
+    box-sizing: border-box;
+    background-color: rgba(255,255,255,0.9);
+    color: #333;
+    transition: box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 8px #0c7110;
+    background-color: white;
+}
+
+.btn-submit {
+    background-color: #0c7110;
+    color: white;
+    font-weight: 600;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #075d0c;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-with-bg {
+        flex-direction: column;
+        padding: 40px 5%;
+        gap: 30px;
+    }
 }

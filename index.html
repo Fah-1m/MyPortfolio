@@ -10,18 +10,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
+   
 </head>
 
 <body class="open-sans-normal">
     <header class="header secondary-bg">
-        <nav>
-            <h3 class="nav-title">Fahim</h3>
-            <ul>
-                <li><a class="dark-2" href="">Portfolio</a></li>
-                <li><a class="dark-2" href="">Blog</a></li>
-                <li><a href=""><button class="btn">Hire Me</button></a></li>
-            </ul>
-        </nav>
+       <nav>
+    <h3 class="nav-title">Fahim</h3>
+    <span class="menu-toggle" id="menu-toggle">☰</span>
+    <ul id="nav-links">
+        <li><a class="nav-link active" href="#portfolio">Portfolio</a></li>
+        <li><a class="nav-link" href="#about">About Me</a></li>
+        <li><a class="nav-link" href="#contact">Contact Me</a></li>
+        <li><a href="#"><button class="btn">Hire Me</button></a></li>
+    </ul>
+       </nav>
+
         <div class="banner">
             
             <img src="images/FahWi.jpg" class="bannerPP">
@@ -37,160 +41,156 @@
         </div>
     </header>
     <main>
-        <section class="about secondary-bg">
-            <h3 class="section-title">About Me</h3>
-            <p class="section-desc">I'm Md Fahim, a B.Sc. Engineering student with a strong passion for
-                competitive programming and software development. I love solving algorithmic challenges and bringing
-                ideas to life through code. My journey in tech is driven by curiosity, continuous learning, and a desire
-                to build solutions that make an impact.<br> Whether it's tackling complex logic or exploring new
-                technologies, I'm always eager to push my limits and grow as a developer.</p>
-            <div class="about-items">
-                <div class="about-item">
-                    <p class="item-title">Name</p>
-                    <p class="item-desc">Md Fahim</p>
-                </div>
-                <div class="about-item">
-                    <p class="item-title">Email</p>
-                    <p class="item-desc">it21039@mbstu.ac.bd</p>
-                </div>
-                <div class="about-item">
-                    <p class="item-title">DOB</p>
-                    <p class="item-desc">12 May 2000</p>
-                </div>
-                <div class="about-item">
-                    <p class="item-title">From</p>
-                    <p class="item-desc">Cumilla, Bangladesh</p>
-                </div>
-            </div>
-        </section>
-        <section class="skills">
-            <h3 class="section-title text">What I Do</h3>
-            <p class="section-desc text">I am currently a 4th-year student at a reputed university of Bangladesh known
-                as
-                Mawlana Bhashani Science and Technology University. I am building my skills to become a good software
-                engineer.</p>
-            <h1>Skills</h1>
-            <h2>Languages:</h2>
-            <div class="skill-container">
+        <section id="about" class="about secondary-bg">
+    <h3 class="section-title">About Me</h3>
+    <p class="section-desc">
+        I'm Md Fahim, a B.Sc. Engineering student with a strong passion for competitive programming and software development.
+        I love solving algorithmic challenges and bringing ideas to life through code. My journey in tech is driven by curiosity,
+        continuous learning, and a desire to build solutions that make an impact.<br>
+        Whether it's tackling complex logic or exploring new technologies, I'm always eager to push my limits and grow as a developer.
+    </p>
+    <div class="about-items">
+        <div class="about-item">
+            <p class="item-title">Name</p>
+            <p class="item-desc">Md Fahim</p>
+        </div>
+        <div class="about-item">
+            <p class="item-title">Email</p>
+            <p class="item-desc">it21039@mbstu.ac.bd</p>
+        </div>
+        <div class="about-item">
+            <p class="item-title">DOB</p>
+            <p class="item-desc">12 May 2000</p>
+        </div>
+        <div class="about-item">
+            <p class="item-title">From</p>
+            <p class="item-desc">Cumilla, Bangladesh</p>
+        </div>
+    </div>
+</section>
 
-                <div class="skill">
-                    <img src="images/icons/Cicon.png" alt="">
-                    <h4 class="skill-title">C</h4>
-                    <p class="skill-desc">I have a strong command over C. I am well-versed in writing
-                        efficient code, solving problems, and building applications using these languages. </p>
-                </div>
-                <div class="skill">
-                    <img src="images/icons/CPPicon.png" alt="">
-                    <h4 class="skill-title">C++</h4>
-                    <p class="skill-desc">I have a strong command over C++. I am well-versed in writing
-                        efficient code, solving problems, and building applications using these languages.</p>
-                </div>
-                <div class="skill">
-                    <img src="images/icons/Go.png" alt="">
-                    <h4 class="skill-title">GoLang</h4>
-                    <p class="skill-desc">I have a strong command over Golang. I am well-versed in writing efficient
-                        code, solving problems, and building applications using these languages.</p>
-                </div>
-            </div>
-            <h2>Frameworks:</h2>
-            <div class="skill-container">
+        <section class="skills" id="skills">
+    <h3 class="section-title text">What I Do</h3>
+    <p class="section-desc text">
+        I am currently a 4th-year student at a reputed university of Bangladesh known as
+        Mawlana Bhashani Science and Technology University. I am building my skills to become a good software
+        engineer.
+    </p>
 
-                <div class="skill">
-                    <img src="images/icons/js.png" alt="">
-                    <h4 class="skill-title">Vanilla javascript</h4>
-                    <p class="skill-desc">I have a solid understanding of Vanilla JavaScript. I'm confident in building full-stack web applications using these technologies. </p>
-                </div>
-                <div class="skill">
-                    <img src="images/icons/react.png" alt="">
-                    <h4 class="skill-title">React</h4>
-                    <p class="skill-desc">I have a solid understanding of React. I'm confident in building full-stack web applications using these technologies.</p>
-                </div>
-                <div class="skill">
-                    <img src="images/icons/nodejs.png" alt="">
-                    <h4 class="skill-title">Node.js</h4>
-                    <p class="skill-desc">I have a solid understanding of Node.js. I'm confident in building full-stack web applications using these technologies.</p>
-                </div>
-                <div class="skill">
-                    <img src="images/icons/mongo.png" alt="">
-                    <h4 class="skill-title">Mongodb</h4>
-                    <p class="skill-desc">I have a solid understanding of MongoDB. I'm confident in building full-stack web applications using these technologies..</p>
-                </div>
-            </div>
+    <h1>Skills</h1>
 
-        </section>
+    <h2>Languages:</h2>
+    <div class="skill-container">
+        <div class="skill">
+            <img src="images/icons/Cicon.png" alt="C">
+            <h4 class="skill-title">C</h4>
+            <p class="skill-desc">Strong command over C for efficient code, problem-solving, and application building.</p>
+        </div>
+        <div class="skill">
+            <img src="images/icons/CPPicon.png" alt="C++">
+            <h4 class="skill-title">C++</h4>
+            <p class="skill-desc">Proficient in C++ for solving problems and building performance-oriented applications.</p>
+        </div>
+        <div class="skill">
+            <img src="images/icons/Go.png" alt="Golang">
+            <h4 class="skill-title">GoLang</h4>
+            <p class="skill-desc">Experience in writing efficient, concurrent, and scalable applications with Golang.</p>
+        </div>
+    </div>
+
+    <h2>Frameworks:</h2>
+    <div class="skill-container">
+        <div class="skill">
+            <img src="images/icons/js.png" alt="JavaScript">
+            <h4 class="skill-title">Vanilla JavaScript</h4>
+            <p class="skill-desc">Solid understanding of core JavaScript for building interactive front-end applications.</p>
+        </div>
+        <div class="skill">
+            <img src="images/icons/react.png" alt="React">
+            <h4 class="skill-title">React</h4>
+            <p class="skill-desc">Capable of building modern, scalable, and responsive UIs using React.</p>
+        </div>
+        <div class="skill">
+            <img src="images/icons/nodejs.png" alt="Node.js">
+            <h4 class="skill-title">Node.js</h4>
+            <p class="skill-desc">Backend development experience with Node.js for API and server-side apps.</p>
+        </div>
+        <div class="skill">
+            <img src="images/icons/mongo.png" alt="MongoDB">
+            <h4 class="skill-title">MongoDB</h4>
+            <p class="skill-desc">Experience designing and managing NoSQL databases with MongoDB.</p>
+        </div>
+    </div>
+</section>
+
         <section class="resume">
-            <h3 class="section-title">A summary of My Resume</h3>
-            <div class="resume-container">
-                <div class="resume-column">
-                    <h3 class="resume-column-title">My Education</h3>
-                    <div class="experience">
-                        <h4 class="experience-title">B.Sc(Engg.) in ICT</h4>
-                        <h5 class="experience-subtitle">Mawlana Bhashani Science and Technology University/2022-present</h5>
-                        <div class="experience-desc"></div>
-                    </div>
-                    <hr>
-                    <div class="experience">
-                        <h4 class="experience-title">HSC</h4>
-                        <h5 class="experience-subtitle">Govt. Adanjeenagor M.W College/2017-2019</h5>
-                        <div class="experience-desc"></div>
-                    </div>
-                    <hr>
-                    <div class="experience">
-                        <h4 class="experience-title">SSC</h4>
-                        <h5 class="experience-subtitle">Daulat Hossain High School/2011-2017</h5>
-                        <div class="experience-desc"></div>
-                    </div>
-                </div>
-                <div class="resume-column">
-                    <h3 class="resume-column-title">Results</h3>
-                    <div class="experience">
-                        <h4 class="experience-title">CGPA</h4>
-                        <h5 class="experience-subtitle">3.25</h5>
-                        <div class="experience-desc"></div>
-                    </div>
-                    <hr>
-                    <div class="experience">
-                        <h4 class="experience-title">GPA</h4>
-                        <h5 class="experience-subtitle">4.71</h5>
-                        <div class="experience-desc"></div>
-                    </div>
-                    <hr>
-                    <div class="experience">
-                        <h4 class="experience-title">GPA</h4>
-                        <h5 class="experience-subtitle">4.68</h5>
-                        <div class="experience-desc"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="text download">
-                <button class="btn">Download CV</button>
-            </div>
-        </section>
+    <h3 class="section-title">A Summary of My Resume</h3>
+    
+    <table class="resume-table">
+        <thead>
+            <tr>
+                <th>Exam</th>
+                <th>Institute</th>
+                <th>CGPA / GPA</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>B.Sc(Engg.) in ICT</td>
+                <td>Mawlana Bhashani Science and Technology University</td>
+                <td>3.25</td>
+            </tr>
+            <tr>
+                <td>HSC</td>
+                <td>Govt. Adanjeenagor M.W College</td>
+                <td>4.71</td>
+            </tr>
+            <tr>
+                <td>SSC</td>
+                <td>Daulat Hossain High School</td>
+                <td>4.68</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="text download">
+        <button class="btn">Download CV</button>
+    </div>
+</section>
+
 
 
     </main>
-    <footer class="secondary-bg">
-        <div class="footer-column">
-            <h3 class="section-title">Lets Connect</h3>
-            <p>You can connect with me through the links given below.</p>
-            <div>
-                <a href="https://www.facebook.com/fahim.fahimurrahaman"><img src="images/icons/facebook.png"></a>
-                <a href=""><img src="images/icons/twitter.png"></a>
-                <a href="https://www.instagram.com/md8515fahim/"><img src="images/icons/insta.png"></a>
-            </div>
+    <footer class="secondary-bg footer-with-bg">
+    <div class="footer-column">
+        <h3 class="section-title">Lets Connect</h3>
+        <p>You can connect with me through the links given below.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/fahim.fahimurrahaman" target="_blank" rel="noopener noreferrer">
+                <img src="images/icons/facebook.png" alt="Facebook">
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="images/icons/twitter.png" alt="Twitter">
+            </a>
+            <a href="https://www.instagram.com/md8515fahim/" target="_blank" rel="noopener noreferrer">
+                <img src="images/icons/insta.png" alt="Instagram">
+            </a>
         </div>
-        <div class="footer-column">
-            <h3 class="section-title">Contact me</h3>
-            <p>Feel free to contact me.</p>
-            <form action="">
-                <input type="text" name="" id="" placeholder="Your name">
-                <input type="text" name="" id="" placeholder="Your Email">
-                <textarea name="" id="" cols="30" rows="10" placeholder="message"></textarea>
-                <input class="btn" type="submit" value="Submit">
+    </div>
+    <div class="footer-column contact-me">
+        <h3 class="section-title">Contact Me</h3>
+        <p>Feel free to contact me anytime. I would love to hear from you!</p>
+        <form action="" class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button class="btn btn-submit" type="submit">Send Message</button>
+        </form>
+    </div>
+</footer>
 
-            </form>
-        </div>
-    </footer>
+    
+
 </body>
 
 </html>
